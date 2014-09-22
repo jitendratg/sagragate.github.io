@@ -1,0 +1,13 @@
+.container {
+    min-height: 100%;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.fa-chevron-left {
+	color: darkgray;
+	cursor: pointer;
+}

@@ -1,0 +1,63 @@
+<div class="alert alert-warning" ng-hide="sites.length > 0">
+    You do not have yet any site created. Please <a href="#/app/site/">create the new site</a>.
+</div>
+
+<div ng-show="sites.length > 0">
+    <div class="clearfix">
+        <div class="pull-right">
+            <a ui-sref="app.site" class="btn btn-success btn-lg" tooltip="sdfs" tooltip-placement="right"><i
+                    class="fa fa-plus fa-lg"></i> Add site</a>
+        </div>
+    </div>
+    <br/>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th width="1px">#</th>
+            <th width="1px"></th>
+            <th>Site name</th>
+            <th>Created</th>
+            <th width="1%">Version</th>
+            <th width="1%">Latest</th>
+            <th width="1%">Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="site in sites">
+            <td>{{$index}}</td>
+            <th width="1px">
+                <div class="btn-group" dropdown is-open="status.isopen">
+                    <button type="button" class="btn btn-default dropdown-toggle btn-sm">
+                        <i class="fa fa-cog"></i>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a ng-click="site.status = !site.status">
+                            <i class="fa" ng-class="{'fa-stop': site.status, 'fa-play': !site.status}"></i>
+                            {{site.status ? 'Stop' : 'Start'}}
+                        </a></li>
+                        <li class="divider"></li>
+                        <li><a href="#/app/site/{{$index}}">Edit</a></li>
+                        <li><a href="#/app/manage/{{$index}}">Manage</a></li>
+                        <li><a href="builder.html">Builder</a></li>
+                        <li><a href="preview.html">Preview</a></li>
+                        <li class="divider"></li>
+                        <li><a href="" ng-click="delete($index)"><i class="fa fa-trash-o"></i> Delete</a></li>
+                    </ul>
+                </div>
+            </th>
+            <td>
+                <a href="#/app/manage/{{$index}}">{{site.name}}</a><br/>
+                <small>{{site.domain}}</small>
+            </td>
+            <td></td>
+            <td>{{site.version}}</td>
+            <td nowrap>
+				<i ng-show="site.version == '1.0.3'" class="fa fa-check-square" tooltip="Up to date!"></i>
+				<a ng-show="site.version != '1.0.3'" href=""><i class="fa fa-download" tooltip="Update to latest version"></i></a>
+				1.0.3
+			</td>
+            <td><i class="fa" ng-class="{'fa-check-square-o': site.status, 'fa-close': !site.status}"></i></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
