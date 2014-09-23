@@ -34,7 +34,3 @@ angular.module('sagra', ['ui.router', 'ui.bootstrap', 'ngSanitize', 'ngAnimate']
 	})
 	.run(function() {
 	});
-
-
-
-

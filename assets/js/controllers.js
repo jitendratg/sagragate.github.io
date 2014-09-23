@@ -54,3 +54,4 @@ angular.module('sagra')
 			$state.go('app.sites');
 		};
 	});
+	
