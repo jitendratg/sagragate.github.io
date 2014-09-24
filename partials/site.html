@@ -26,24 +26,17 @@
 		</div>
 		<div class="row">
 			<div class="form-group">
-				<div class="col-sm-offset-2 col-sm-10">
-					<label for="chkOnline" class="col-sm-2 checkbox-inline">
-						<input type="checkbox" class="checkbox" id="chkOnline" ng-model="site.status"/>
-						Put online?
-					</label>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="form-group">
-				<label for="inputEmail5" class="col-sm-2 control-label">Google Analytics</label>
+				<label for="inputEmail4" class="col-sm-2 control-label">State</label>
 
 				<div class="col-sm-10">
-					<input type="text" class="form-control" id="inputEmail5" ng-model="site.google" placeholder="Enter google anolytic code">
+					<span class="btn-group">
+						<button type="button" class="btn btn-default" ng-class="{'btn-success': site.status == 1}" ng-click="site.status = 1">Online</button>
+						<button type="button" class="btn btn-default" ng-class="{'btn-danger': site.status == 0}" ng-click="site.status = 0">Offline</button>
+					</span>
 				</div>
 			</div>
 		</div>
+
 		<div class="row">
 			<div class="form-group">
 				<label class="col-sm-2 control-label">Account Type</label>
@@ -68,6 +61,17 @@
 			</div>
 		</div>
 
+		<h3>Site properties</h3>
+
+		<div class="row">
+			<div class="form-group">
+				<label for="inputEmail5" class="col-sm-2 control-label">Google Analytics</label>
+
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="inputEmail5" ng-model="site.google" placeholder="Enter google anolytic code">
+				</div>
+			</div>
+		</div>
 		<div class="form-group">
 			<label class="col-sm-2 control-label">layout</label>
 
@@ -84,7 +88,7 @@
 
 				<div class="col-sm-3">
 					<select id="inputEmail22" ng-model="site.theme" class="form-control">
-						<option value=""> - Select Theme - </option>
+						<option value=""> - Select Theme -</option>
 						<option value="default">Default</option>
 						<option value="aqua">Aqua (For Silver subscribers only)</option>
 						<option value="dark">Dark (For Gold subscribers only)</option>

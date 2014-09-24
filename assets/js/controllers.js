@@ -1,6 +1,8 @@
 angular.module('sagra')
 	.controller('siteCtrl', function($scope, $stateParams, $state, Sites, $log) {
-		$scope.site = angular.isDefined($stateParams.id) && $stateParams.id.length > 0 ? Sites[$stateParams.id] : {accounttype: 1, theme:'default', google: 'UX-XXXXX-1'};
+		$scope.site = angular.isDefined($stateParams.id) && $stateParams.id.length > 0 ?
+			Sites[$stateParams.id] :
+			{accounttype: 1, theme: 'default', google: 'UX-XXXXX-1', status: 0};
 		$scope.submit = function(valid) {
 			if(!valid) {
 				$log.warn('Form invalid');
@@ -28,8 +30,8 @@ angular.module('sagra')
 	.controller('mainCtrl', function($scope, $state, User, $log) {
 		$scope.user = User;
 
-		$scope.logout = function(){
-			$scope.user =  {id: '0'};
+		$scope.logout = function() {
+			$scope.user = {id: '0'};
 		}
 
 		$scope.$watch('user', function(newValue, oldValue) {
