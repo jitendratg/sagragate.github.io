@@ -1,6 +1,6 @@
 angular.module('sagra')
 	.controller('siteCtrl', function($scope, $stateParams, $state, Sites, $log) {
-		$scope.site = angular.isDefined($stateParams.id) && $stateParams.id.length > 0 ? Sites[$stateParams.id] : {};
+		$scope.site = angular.isDefined($stateParams.id) && $stateParams.id.length > 0 ? Sites[$stateParams.id] : {accounttype: 1, theme:'default', google: 'UX-XXXXX-1'};
 		$scope.submit = function(valid) {
 			if(!valid) {
 				$log.warn('Form invalid');
