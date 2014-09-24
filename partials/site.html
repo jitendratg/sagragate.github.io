@@ -26,10 +26,11 @@
 		</div>
 		<div class="row">
 			<div class="form-group">
-				<label for="chkOnline" class="col-sm-2 control-label">Online?</label>
-
-				<div class="col-sm-1">
-					<input type="checkbox" class="checkbox" id="chkOnline" ng-model="site.status"/>
+				<div class="col-sm-offset-2 col-sm-10">
+					<label for="chkOnline" class="col-sm-2 checkbox-inline">
+						<input type="checkbox" class="checkbox" id="chkOnline" ng-model="site.status"/>
+						Put online?
+					</label>
 				</div>
 			</div>
 		</div>
@@ -47,22 +48,21 @@
 			<div class="form-group">
 				<label class="col-sm-2 control-label">Account Type</label>
 
-
 				<div class="col-sm-10">
 					<label class="radio-inline">
 						<input type="radio" class="radio" ng-model="site.accounttype" value="1"/>
 
 						Free Account
-					</label>
+					</label><br/>
 					<label class="radio-inline">
 						<input type="radio" class="radio" ng-model="site.accounttype" value="2"/>
 
-						$5/Month
-					</label>
+						Silver - $5/Month
+					</label><br/>
 					<label class="radio-inline">
 						<input type="radio" class="radio" ng-model="site.accounttype" value="3"/>
 
-						$10/Month
+						Gold - $10/Month
 					</label>
 				</div>
 			</div>
@@ -85,8 +85,9 @@
 				<div class="col-sm-3">
 					<select id="inputEmail22" ng-model="site.theme" class="form-control">
 						<option value=""> - Select Theme - </option>
-						<option value="aqua">Aqua</option>
-						<option value="dark">Dark</option>
+						<option value="default">Default</option>
+						<option value="aqua">Aqua (For Silver subscribers only)</option>
+						<option value="dark">Dark (For Gold subscribers only)</option>
 					</select>
 				</div>
 			</div>
