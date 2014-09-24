@@ -46,39 +46,25 @@
 		</div>
 		<div class="row">
 			<div class="form-group">
-				<label for="inputEmail6" class="col-sm-2 control-label">Account Type</label>
+				<label class="col-sm-2 control-label">Account Type</label>
 
-				<div class="col-sm-1">
-					<input type="radio" class="radio" id="rbFree" name="A" checked="checked"/>
-				</div>
-				<div class="col-sm-2">
-					<label for="inputEmail4" class="control-label">Free</label>
-				</div>
-			</div>
-		</div>
 
-		<div class="row">
-			<div class="form-group">
-				<label for="inputEmail7" class="col-sm-2 control-label"></label>
+				<div class="col-sm-10">
+					<label class="radio-inline">
+						<input type="radio" class="radio" ng-model="site.accounttype" value="1"/>
 
-				<div class="col-sm-1">
-					<input type="radio" class="radio" id="rbfivemonth" name="A"/>
-				</div>
-				<div class="col-sm-2">
-					<label for="inputEmail8" class="control-label">$5 o month</label>
-				</div>
-			</div>
-		</div>
+						Free Account
+					</label>
+					<label class="radio-inline">
+						<input type="radio" class="radio" ng-model="site.accounttype" value="2"/>
 
-		<div class="row">
-			<div class="form-group">
-				<label for="inputEmail9" class="col-sm-2 control-label"></label>
+						$5/Month
+					</label>
+					<label class="radio-inline">
+						<input type="radio" class="radio" ng-model="site.accounttype" value="3"/>
 
-				<div class="col-sm-1">
-					<input type="radio" class="radio" id="chktenmonth" name="A"/>
-				</div>
-				<div class="col-sm-4">
-					<label for="inputEmai20" class="control-label">$10 o month (Indeterminate)</label>
+						$10/Month
+					</label>
 				</div>
 			</div>
 		</div>
