@@ -3,6 +3,7 @@ angular.module('sagra')
 		$scope.site = angular.isDefined($stateParams.id) && $stateParams.id.length > 0 ? Sites[$stateParams.id] : {};
 		$scope.submit = function(valid) {
 			if(!valid) {
+				$log.warn('Form invalid');
 				return;
 			}
 
