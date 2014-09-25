@@ -1,109 +1,261 @@
-<div class="page-header">
-	<h1>
-		<i class="fa fa-chevron-left" ui-sref="app.sites" tooltip="Back to list of the sites"></i>
-		{{site.id | condition: "Edit: " + site.name : "Add new site"}}
-	</h1>
-</div>
-<form class="form-horizontal" name="siteForm" role="form" ng-submit="submit(siteForm.$valid)" novalidate="novalidate">
-<div class="row">
- <div class="form-group">
-    <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputEmail3" placeholder="Enter site name" required ng-model="site.name">
+       
+        <div class="page-header">
+          <h1> <i class="fa fa-chevron-left" ui-sref="app.sites" tooltip="Back to list of the sites"></i> {{site.id | condition: "Edit: " + site.name : "Add new site"}} </h1>
         </div>
-</div>
-</div>
-<div class="row">
- <div class="form-group">
-        <label for="inputEmail4" class="col-sm-2 control-label">Domain</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputEmail4" placeholder="Enter domain name" required ng-model="site.domain">
-        </div>
-</div>
-</div>
-<div class="row">
- <div class="form-group">
-        <label for="chkOnline" class="col-sm-2 control-label">Online?</label>
-        <div class="col-sm-1">
-         <input type="checkbox" class="checkbox" id="chkOnline" required ng-model="site.status"/>
-        </div>
- </div>
-    </div>
-    
-    <div class="row">
- <div class="form-group">
-        <label for="inputEmail5" class="col-sm-2 control-label">Google Anolytics code</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputEmail5" placeholder="Enter google anolytic code">
-        </div>
-</div>
-</div>
-     <div class="row">
-        <div class="form-group">
-        <label for="inputEmail6" class="col-sm-2 control-label">Account Type</label>
-         <div class="col-sm-1">
-         <input type="radio" class="radio" id="rbFree" name="A" checked="checked"/>
-         </div>
-         <div class="col-sm-2">
-          <label for="inputEmail4" class="control-label">Free</label>
-         </div>
-        </div>
-        </div>
-        
-        <div class="row">
-        <div class="form-group">
-        <label for="inputEmail7" class="col-sm-2 control-label"></label>
-         <div class="col-sm-1">
-         <input type="radio" class="radio" id="rbfivemonth"  name="A"/>
-         </div>
-         <div class="col-sm-2">
-          <label for="inputEmail8" class="control-label">$5 o month</label>
-         </div>
-        </div>
-        </div>
-        
-        <div class="row">
-        <div class="form-group">
-        <label for="inputEmail9" class="col-sm-2 control-label"></label>
-         <div class="col-sm-1">
-         <input type="radio" class="radio" id="chktenmonth"  name="A"/>
-         </div>
-         <div class="col-sm-4">
-          <label for="inputEmai20" class="control-label">$10 o month (Indeterminate)</label>
-         </div>
-        </div>
-        </div>
-        </div>
-        
-         <div class="row">
- <div class="form-group">
-        <label for="inputEmai21" class="col-sm-2 control-label">layout</label>
-        <div class="col-sm-2">
-             <img class="img-thumbnail" src="http://placehold.it/150x150" alt="">
-        </div>
-        <div class="col-sm-2">
-            <img class="img-thumbnail" src="http://placehold.it/150x150" alt="">
-        </div>
-</div>
-   
-    <div class="row">
- <div class="form-group">
-        <label for="inputEmail22" class="col-sm-2 control-label">Theme</label>
-        <div class="col-sm-3">
-          <select id="inputEmail22" name="select" class="form-control">
-          <option>Select Theme</option>
-          </select>
-        </div>
-</div>
-</div>     
-        
-    <div class="row">
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-			<button type="submit" class="btn btn-default">Save</button>
-            <button type="cancel" class="btn btn-default" ng-click="reset()">Cancel</button>
-        </div>
-    </div>
-    </div>
-</form>
+        <form class="form-horizontal" name="siteForm" role="form" ng-submit="submit(siteForm.$valid)" novalidate="novalidate">
+          <div class="row">
+            <div class="form-group">
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="Enter site name" required ng-model="site.name">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <label for="inputEmail4" class="col-sm-2 control-label">Domain</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputEmail4" placeholder="Enter domain name" required ng-model="site.domain">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <label for="chkOnline" class="col-sm-2 control-label">Online?</label>
+                <div class="col-sm-1">
+                  <input type="checkbox" class="checkbox" id="chkOnline" required ng-model="site.status"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <label for="inputEmail5" class="col-sm-2 control-label">Google Anolytics code</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputEmail5" placeholder="Enter google anolytic code">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <label for="inputEmail6" class="col-sm-2 control-label">Account Type</label>
+                <div class="col-sm-2">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                      <h2 class="panel-title">Service / Package</h2>
+                      <hr/>
+                      <h1 class="text-default">$</h1>
+                      <h6 class="text-default">&nbsp;</h6>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-sm-12 text-center">
+                          <div class="text-center">
+                            <table class="table table-bordered table-responsive">
+                              <tr>
+                                <td>Custom domain</td>
+                              </tr>
+                              <tr>
+                                <td>Layout</td>
+                              </tr>
+                              <tr>
+                                <td>Themes</td>
+                              </tr>
+                              <tr>
+                                <td>Widgets types</td>
+                              </tr>
+                               <tr>
+                               <td>Please Choose</td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                      <h2 class="panel-title">FREE</h2>
+                      <hr/>
+                      <h1 class="text-default">$0</h1>
+                      <h6 class="text-default">&nbsp;</h6>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-sm-12 text-center">
+                          <div class="text-center">
+                            <table class="table table-bordered table-responsive">
+                              <tr>
+                                <td>No</td>
+                              </tr>
+                              <tr>
+                                <td>1</td>
+                              </tr>
+                              <tr>
+                                <td>5</td>
+                              </tr>
+                              <tr>
+                                <td>20</td>
+                              </tr>
+                               <tr>
+                             <td><input type="radio" id="rd4" name="select" /></td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                      <h2 class="panel-title">Silver</h2>
+                      <hr/>
+                      <h1 class="text-default">$5</h1>
+                      <h6 class="text-default">Per Month</h6>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-sm-12 text-center">
+                          <div class="text-center">
+                            <table class="table table-bordered table-responsive">
+                              <tr>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                              </tr>
+                              <tr>
+                                <td>10</td>
+                              </tr>
+                              <tr> 
+                                <td>40</td>
+                              </tr>
+                               <tr>
+                              <td><input type="radio" id="rd3" name="select" /></td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                      <h2 class="panel-title">Gold</h2>
+                      <hr/>
+                      <h1 class="text-default">$10</h1>
+                      <h6 class="text-default">Per Month</h6>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-sm-12 text-center">
+                          <div class="text-center">
+                            <table class="table table-bordered table-responsive">
+                              <tr>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                              </tr>
+                              <tr>
+                                <td>15</td>
+                              </tr>
+                              <tr>
+                                <td>60</td>
+                              </tr>
+                              <tr>
+                                <td><input type="radio" id="rd2" name="select" /></td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                      <h2 class="panel-title">Dimond</h2>
+                      <hr/>
+                      <h1 class="text-default">$19</h1>
+                      <h6 class="text-default">Per Month</h6>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-sm-12 text-center">
+                          <div class="text-center">
+                            <table class="table table-bordered table-responsive">
+                              <tr>
+                                <td>Unlimited</td>
+                              </tr>
+                              <tr>
+                                <td>unlimited</td>
+                              </tr>
+                              <tr>
+                                <td>Unlimited</td>
+                              </tr>
+                              <tr>
+                                <td>Unlimited</td>
+                              </tr>
+                               <tr>
+                               <td><input type="radio" id="rd1" name="select" /></td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="inputEmail22" class="col-sm-2 control-label">Layout</label>
+              <div class="col-sm-2"> <img class="img-thumbnail" id="myImg" src="http://placehold.it/150x150" alt=""> </div>
+              <div class="col-sm-2"> <img class="img-thumbnail" src="http://placehold.it/150x150" alt="" > </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="inputEmail22" class="col-sm-2 control-label">Theme</label>
+              <div class="col-sm-3">
+                <select id="inputEmail22" name="select" class="form-control">
+                  <option>Select Theme</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="inputEmail22" class="col-sm-2 control-label">Card Type</label>
+              <div class="col-sm-3">
+                <select id="inputEmail22" name="select" class="form-control">
+                  <option>Select Card Type</option>
+                   <option>Visa</option>
+                   <option>Amax </option>
+                   <option>American Express</option>
+                   <option>Discover</option>
+                   <option>Master Credit Card</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                 <button type="submit" class="btn btn-default">Save</button>
+                 <a class="btn btn-default" href="Payment.html">Pay Now</a>
+                 <button type="cancel" class="btn btn-default" ng-click="reset()">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </form>
