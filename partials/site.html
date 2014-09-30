@@ -122,7 +122,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row form-group" ng-hide="site.plan == 0">
+	<div class="row form-group" ng-show="site.plan > 0">
 		<label for="inputCardNo" class="col-sm-2 control-label">Card No</label>
 
 		<div class="col-sm-3">
@@ -135,7 +135,7 @@
 		</div>
 	</div>
 
-	<div class="row form-group" ng-show="myCard =='six'">
+	<div class="row form-group" ng-show="myCard =='six' && site.plan > 0">
 		<label class="col-sm-2 control-label"></label>
 
 		<div class="col-sm-10">
