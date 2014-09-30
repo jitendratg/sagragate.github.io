@@ -5,23 +5,23 @@
       <div class="row">
         <div class="form-group">
           <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+            <label for="inputName" class="col-sm-2 control-label">Name</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputEmail3" placeholder="Enter site name" required ng-model="site.name">
+              <input type="text" class="form-control" id="inputName" placeholder="Enter site name" required ng-model="site.name">
             </div>
           </div>
         </div>
         <div class="row">
           <div class="form-group">
-            <label for="inputEmail4" class="col-sm-2 control-label">Domain</label>
+            <label for="inputDomain" class="col-sm-2 control-label">Domain</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputEmail4" placeholder="Enter domain name" required ng-model="site.domain">
+              <input type="text" class="form-control" id="inputDomain" placeholder="Enter domain name" required ng-model="site.domain">
             </div>
           </div>
         </div>
         <div class="row">
           <div class="form-group">
-            <label for="inputEmail4" class="col-sm-2 control-label">State</label>
+            <label for="inputState" class="col-sm-2 control-label">State</label>
             <div class="col-sm-10"> <span class="btn-group">
               <button type="button" class="btn btn-default" ng-class="{'btn-success': site.status == 1}" ng-click="site.status = 1">Online</button>
               <button type="button" class="btn btn-default" ng-class="{'btn-danger': site.status == 0}" ng-click="site.status = 0">Offline</button>
@@ -30,48 +30,38 @@
         </div>
         <div class="row">
           <div class="form-group">
-            <label for="inputEmail6" class="col-sm-2 control-label">Account Type</label>
-
+            <label for="inputAccountType" class="col-sm-2 control-label">Account Type</label>
 			  <div class="col-sm-10">
 			    <div class="row">
-
-					<div class="col-sm-3">
-					  <div class="panel panel-primary">
+					<div class="col-sm-3" ng-class="{'btn btn-success btn-sm': site.plan == 0}" ng-click="site.plan = 0">
+					  <div class="panel panel-primary" ng-click="visible = !visible">
 						<div class="panel-heading text-center">
 						  <h2 class="panel-title">FREE</h2>
 						  <hr/>
 						  <h1 class="text-default">$0</h1>
 						  <h6 class="text-default">&nbsp;</h6>
 						</div>
+                        
 						<div class="panel-body">
 						  <div class="row">
 							<div class="col-sm-12 text-center">
-							  <div class="text-center">
-								<table class="table table-bordered table-responsive">
-								  <tr>
-									<td>No</td>
-								  </tr>
-								  <tr>
-									<td>Layouts 1</td>
-								  </tr>
-								  <tr>
-									<td>Themes 5</td>
-								  </tr>
-								  <tr>
-									<td>Widgets 20</td>
-								  </tr>
-								  <tr>
-									<td><input type="radio" id="rd4" name="select" /></td>
-								  </tr>
-								</table>
+							 <div class="plan-features">
+                             <div class="text-info">
+                              		<ul>
+										<li>No</li>
+										<li>Layouts 1</li>
+										<li>Themes 5</li>
+										<li>Widgets 20</li>
+									</ul>
+                              </div>
 							  </div>
 							</div>
 						  </div>
 						</div>
 					  </div>
 					</div>
-					<div class="col-sm-3">
-					  <div class="panel panel-primary">
+					<div class="col-sm-3" ng-class="{'btn btn-success btn-sm': site.plan == 1}" ng-click="site.plan = 1">
+					  <div class="panel panel-primary" ng-click="visible =!visible">
 						<div class="panel-heading text-center">
 						  <h2 class="panel-title">Silver</h2>
 						  <hr/>
@@ -81,32 +71,23 @@
 						<div class="panel-body">
 						  <div class="row">
 							<div class="col-sm-12 text-center">
-							  <div class="text-center">
-								<table class="table table-bordered table-responsive">
-								  <tr>
-									<td>Yes</td>
-								  </tr>
-								  <tr>
-									<td>Layouts 2</td>
-								  </tr>
-								  <tr>
-									<td>Themes 10</td>
-								  </tr>
-								  <tr>
-									<td>Widgets 40</td>
-								  </tr>
-								  <tr>
-									<td><input type="radio" id="rd3" name="select" /></td>
-								  </tr>
-								</table>
+							  <div class="plan-features">
+                               <div class="text-info">
+                              		<ul>
+										<li>Yes</li>
+										<li>Layouts 2</li>
+										<li>Themes 10</li>
+										<li>Widgets 40</li>
+									</ul>
+                                   </div>
 							  </div>
 							</div>
 						  </div>
 						</div>
 					  </div>
 					</div>
-					<div class="col-sm-3">
-					  <div class="panel panel-primary">
+					<div class="col-sm-3" ng-class="{'btn btn-success btn-sm': site.plan == 2}" ng-click="site.plan = 2">
+					  <div class="panel panel-primary" ng-click="visible =! visible">
 						<div class="panel-heading text-center">
 						  <h2 class="panel-title">Gold</h2>
 						  <hr/>
@@ -116,32 +97,23 @@
 						<div class="panel-body">
 						  <div class="row">
 							<div class="col-sm-12 text-center">
-							  <div class="text-center">
-								<table class="table table-bordered table-responsive">
-								  <tr>
-									<td>Yes</td>
-								  </tr>
-								  <tr>
-									<td>Layouts 3</td>
-								  </tr>
-								  <tr>
-									<td>Themes 15</td>
-								  </tr>
-								  <tr>
-									<td>Widgets 60</td>
-								  </tr>
-								  <tr>
-									<td><input type="radio" id="rd2" name="select" /></td>
-								  </tr>
-								</table>
+							  <div class="plan-features">
+                              <div class="text-info">
+                             		 <ul>
+										<li>Yes</li>
+										<li>Layouts 3</li>
+										<li>Themes 15</li>
+										<li>Widgets 60</li>
+									</ul>
+                                   </div>
 							  </div>
 							</div>
 						  </div>
 						</div>
 					  </div>
 					</div>
-					<div class="col-sm-3">
-					  <div class="panel panel-primary">
+					<div class="col-sm-3" ng-class="{'btn btn-success btn-sm': site.plan == 3}" ng-click="site.plan = 3" ng-model="hide">
+					  <div class="panel panel-primary" ng-click="visible =! visible">
 						<div class="panel-heading text-center">
 						  <h2 class="panel-title">Dimond</h2>
 						  <hr/>
@@ -151,24 +123,15 @@
 						<div class="panel-body">
 						  <div class="row">
 							<div class="col-sm-12 text-center">
-							  <div class="text-center">
-								<table class="table table-bordered table-responsive">
-								  <tr>
-									<td>Yes</td>
-								  </tr>
-								  <tr>
-									<td>All</td>
-								  </tr>
-								  <tr>
-									<td>All</td>
-								  </tr>
-								  <tr>
-									<td>All</td>
-								  </tr>
-								  <tr>
-									<td><input type="radio" id="rd1" name="select" /></td>
-								  </tr>
-								</table>
+                             <div class="plan-features">
+                             <div class="text-info">
+                             		 <ul>
+										<li>Yes</li>
+										<li>All</li>
+										<li>All</li>
+										<li>All</li>
+									</ul>
+                                   </div>
 							  </div>
 							</div>
 						  </div>
@@ -177,8 +140,12 @@
 					</div>
 			    </div>
 
-				<div ng-include="'partials/payment.html'"></div>
-
+				<div ng-hide="visible">
+                <div ng-include="'partials/payment.html'"></div>
+                </div>
+                
+              
+                
 			  </div>
           </div>
         </div>
@@ -186,9 +153,9 @@
       <h3>Site properties</h3>
       <div class="row">
         <div class="form-group">
-          <label for="inputEmail5" class="col-sm-2 control-label">Google Analytics</label>
+          <label for="inputinputGoogleAnalytics" class="col-sm-2 control-label">Google Analytics</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputEmail5" ng-model="site.google" placeholder="Enter google analytics code">
+            <input type="text" class="form-control" id="inputGoogleAnalytics" ng-model="site.google" placeholder="Enter google analytics code">
           </div>
         </div>
       </div>
@@ -206,9 +173,9 @@
            </div>
       <div class="row">
         <div class="form-group">
-          <label for="inputEmail22" class="col-sm-2 control-label">Theme</label>
+          <label for="inputTheme" class="col-sm-2 control-label">Theme</label>
           <div class="col-sm-3">
-            <select id="inputEmail22" ng-model="site.theme" class="form-control">
+            <select id="inputSelectTheme" ng-model="site.theme" class="form-control">
               <option value=""> - Select Theme -</option>
               <option value="default">Default</option>
               <option value="aqua">Aqua (For Silver subscribers only)</option>
@@ -217,21 +184,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
-            <div class="form-group">
-              <label for="inputEmail22" class="col-sm-2 control-label">Card Type</label>
-              <div class="col-sm-3">
-                <select id="inputEmail22" name="select" class="form-control">
-                  <option>Select Card Type</option>
-                   <option>Visa</option>
-                   <option>Amax </option>
-                   <option>American Express</option>
-                   <option>Discover</option>
-                   <option>Master Credit Card</option>
-                </select>
-              </div>
-            </div>
-          </div>
+ 
       <div class="row">
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
