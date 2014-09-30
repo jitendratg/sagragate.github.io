@@ -11,3 +11,26 @@ footer {
 	color: darkgray;
 	cursor: pointer;
 }
+
+
+/*-- Plan Container --*/
+
+.plan-container {
+    position: relative;
+    float: left;    
+}
+
+/*-- Plan Features --*/
+.plan-features ul {
+	padding: 0;
+	margin: 0;
+	
+	list-style: none;
+}
+
+.plan-features li {	
+	padding: 1em 0;
+	margin: 0 2em;
+	text-align: center;
+	border-bottom: 1px dotted #CCC;
+}
