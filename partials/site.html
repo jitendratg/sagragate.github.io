@@ -1,4 +1,4 @@
-    <div class="page-header">
+  <div class="page-header">
       <h1> <i class="fa fa-chevron-left" ui-sref="app.sites" tooltip="Back to list of the sites"></i> {{site.id | condition: "Edit: " + site.name : "Add new site"}} </h1>
     </div>
     <form class="form-horizontal" name="siteForm" role="form" ng-submit="submit(siteForm.$valid)" novalidate="novalidate">
@@ -31,122 +31,140 @@
         <div class="row">
           <div class="form-group">
             <label for="inputAccountType" class="col-sm-2 control-label">Account Type</label>
-			  <div class="col-sm-10">
-			    <div class="row">
-					<div class="col-sm-3" ng-click="site.plan = 0">
-					  <div class="panel" ng-class="{'panel-success': site.plan != 0, 'panel-primary': site.plan == 0}">
-						<div class="panel-heading text-center">
-						  <h2 class="panel-title">FREE</h2>
-						  <hr/>
-						  <h1 class="text-default">$0</h1>
-						  <h6 class="text-default">&nbsp;</h6>
-						</div>
-                        
-						<div class="panel-body">
-						  <div class="row">
-							<div class="col-sm-12 text-center">
-							 <div class="plan-features">
-                             <div class="text-info">
-                              		<ul>
-										<li>No</li>
-										<li>Layouts 1</li>
-										<li>Themes 5</li>
-										<li>Widgets 20</li>
-									</ul>
-                              </div>
-							  </div>
-							</div>
-						  </div>
-						</div>
-					  </div>
-					</div>
-					<div class="col-sm-3" ng-click="site.plan = 1">
-					  <div class="panel" ng-class="{'panel-success': site.plan != 1, 'panel-primary': site.plan == 1}">
-						<div class="panel-heading text-center">
-						  <h2 class="panel-title">Silver</h2>
-						  <hr/>
-						  <h1 class="text-default">$5</h1>
-						  <h6 class="text-default">Per Month</h6>
-						</div>
-						<div class="panel-body">
-						  <div class="row">
-							<div class="col-sm-12 text-center">
-							  <div class="plan-features">
-                               <div class="text-info">
-                              		<ul>
-										<li>Yes</li>
-										<li>Layouts 2</li>
-										<li>Themes 10</li>
-										<li>Widgets 40</li>
-									</ul>
-                                   </div>
-							  </div>
-							</div>
-						  </div>
-						</div>
-					  </div>
-					</div>
-					<div class="col-sm-3" ng-click="site.plan = 2">
-					  <div class="panel" ng-class="{'panel-success': site.plan != 2, 'panel-primary': site.plan == 2}">
-						<div class="panel-heading text-center">
-						  <h2 class="panel-title">Gold</h2>
-						  <hr/>
-						  <h1 class="text-default">$10</h1>
-						  <h6 class="text-default">Per Month</h6>
-						</div>
-						<div class="panel-body">
-						  <div class="row">
-							<div class="col-sm-12 text-center">
-							  <div class="plan-features">
-                              <div class="text-info">
-                             		 <ul>
-										<li>Yes</li>
-										<li>Layouts 3</li>
-										<li>Themes 15</li>
-										<li>Widgets 60</li>
-									</ul>
-                                   </div>
-							  </div>
-							</div>
-						  </div>
-						</div>
-					  </div>
-					</div>
-					<div class="col-sm-3" ng-click="site.plan = 3" ng-model="hide">
-					  <div class="panel" ng-class="{'panel-success': site.plan != 3, 'panel-primary': site.plan == 3}">
-						<div class="panel-heading text-center">
-						  <h2 class="panel-title">Dimond</h2>
-						  <hr/>
-						  <h1 class="text-default">$19</h1>
-						  <h6 class="text-default">Per Month</h6>
-						</div>
-						<div class="panel-body">
-						  <div class="row">
-							<div class="col-sm-12 text-center">
-                             <div class="plan-features">
-                             <div class="text-info">
-                             		 <ul>
-										<li>Yes</li>
-										<li>All</li>
-										<li>All</li>
-										<li>All</li>
-									</ul>
-                                   </div>
-							  </div>
-							</div>
-						  </div>
-						</div>
-					  </div>
-					</div>
-			    </div>
-
-				<div ng-hide="site.plan == 0">
-                <div ng-include="'partials/payment.html'"></div>
+            <div class="col-sm-10">
+              <div class="row">
+                <div class="col-sm-3" ng-click="site.plan = 0">
+                  <div class="panel" ng-class="{'panel-success': site.plan != 0, 'panel-primary': site.plan == 0}">
+                    <div class="panel-heading text-center">
+                      <h2 class="panel-title">FREE</h2>
+                      <hr/>
+                      <h1 class="text-default">$0</h1>
+                      <h6 class="text-default">&nbsp;</h6>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-sm-12 text-center">
+                          <div class="plan-features">
+                            <div class="text-info">
+                              <ul>
+                                <li>No</li>
+                                <li>Layouts 1</li>
+                                <li>Themes 5</li>
+                                <li>Widgets 20</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                
-              
-                
-			  </div>
+                <div class="col-sm-3" ng-click="site.plan = 1">
+                  <div class="panel" ng-class="{'panel-success': site.plan != 1, 'panel-primary': site.plan == 1}">
+                    <div class="panel-heading text-center">
+                      <h2 class="panel-title">Silver</h2>
+                      <hr/>
+                      <h1 class="text-default">$5</h1>
+                      <h6 class="text-default">Per Month</h6>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-sm-12 text-center">
+                          <div class="plan-features">
+                            <div class="text-info">
+                              <ul>
+                                <li>Yes</li>
+                                <li>Layouts 2</li>
+                                <li>Themes 10</li>
+                                <li>Widgets 40</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3" ng-click="site.plan = 2">
+                  <div class="panel" ng-class="{'panel-success': site.plan != 2, 'panel-primary': site.plan == 2}">
+                    <div class="panel-heading text-center">
+                      <h2 class="panel-title">Gold</h2>
+                      <hr/>
+                      <h1 class="text-default">$10</h1>
+                      <h6 class="text-default">Per Month</h6>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-sm-12 text-center">
+                          <div class="plan-features">
+                            <div class="text-info">
+                              <ul>
+                                <li>Yes</li>
+                                <li>Layouts 3</li>
+                                <li>Themes 15</li>
+                                <li>Widgets 60</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3" ng-click="site.plan = 3" ng-model="hide">
+                  <div class="panel" ng-class="{'panel-success': site.plan != 3, 'panel-primary': site.plan == 3}">
+                    <div class="panel-heading text-center">
+                      <h2 class="panel-title">Dimond</h2>
+                      <hr/>
+                      <h1 class="text-default">$19</h1>
+                      <h6 class="text-default">Per Month</h6>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-sm-12 text-center">
+                          <div class="plan-features">
+                            <div class="text-info">
+                              <ul>
+                                <li>Yes</li>
+                                <li>All</li>
+                                <li>All</li>
+                                <li>All</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div >
+        <div class="row" ng-hide="site.plan == 0">
+          <div class="form-group">
+            <label for="inputTheme" class="col-sm-2 control-label">Card No</label>
+            <div class="col-sm-3">
+              <select id="inputCardNo" name="select" ng-model="myCard" class="form-control">
+                <option value="default">Select Card No</option>
+                <option value="one">201457462989749</option>
+                <option value="two">374372716098158</option>
+                <option value="three">4532265416447942</option>
+                <option value="four">5252681287880935</option>
+                <option value="five">38346253062841</option>
+                <option value="six">New Card</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ng-show="myCard =='six'">
+        <div class="row">
+          <label class="col-sm-2 control-label"></label>
+          <div class="col-sm-10">
+            <div ng-include="'partials/payment.html'"></div>
           </div>
         </div>
       </div>
@@ -159,18 +177,18 @@
           </div>
         </div>
       </div>
-       <div class="row">
+      <div class="row">
       <div class="form-group">
         <label class="col-sm-2 control-label">layout</label>
         <div class="col-sm-10">
-           <img class="img-thumbnail" class="btn img-thumbnail" ng-class="{'btn-success': site.layout == 2}" ng-click="site.layout = 2"
+          <img class="img-thumbnail" class="btn img-thumbnail" ng-class="{'btn-success': site.layout == 2}" ng-click="site.layout = 2"
            src="http://placehold.it/100x100&text=Layout%20A" alt="">
-           <img class="img-thumbnail" class="btn img-thumbnail" ng-class="{'btn-success': site.layout == 0}" ng-click="site.layout = 0"
+          <img class="img-thumbnail" class="btn img-thumbnail" ng-class="{'btn-success': site.layout == 0}" ng-click="site.layout = 0"
            src= "http://placehold.it/100x100&text=Layout%20B" alt="">
-           <img class="img-thumbnail" class="btn img-thumbnail" ng-class="{'btn-success': site.layout == 1}" ng-click="site.layout = 1"
+          <img class="img-thumbnail" class="btn img-thumbnail" ng-class="{'btn-success': site.layout == 1}" ng-click="site.layout = 1"
            src="http://placehold.it/100x100&text=Layout%20C" alt="">
-           </div>
-           </div>
+        </div>
+      </div>
       <div class="row">
         <div class="form-group">
           <label for="inputTheme" class="col-sm-2 control-label">Theme</label>
@@ -184,12 +202,11 @@
           </div>
         </div>
       </div>
- 
       <div class="row">
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
             <button type="submit" class="btn btn-primary">Save</button>
-           <a class="btn btn-success" href="payment.html">Pay Now</a>
+            <a class="btn btn-success" href="payment.html">Pay Now</a>
             <button type="cancel" class="btn btn-danger" ng-click="reset()">Cancel</button>
           </div>
         </div>
